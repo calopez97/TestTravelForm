@@ -1,0 +1,104 @@
+nav.navbar{
+    background-color: $darkBlue;
+    box-shadow: 0 1px 15px #0000004a;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    @media screen and (max-width: $tablet) {
+        position: relative;
+    }
+    .container-lg{
+        
+        .main-brand{
+            .nav-link{
+                color: white;
+                text-transform: uppercase;
+            }
+            
+        }
+        .navbar-nav{
+            @media screen and (max-width: $tabletX) {
+                position: fixed;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                top: 46px;
+                background-color: $darkBlue;
+                right: 100%;
+                transition: .5s;
+                animation: .5s ease-in-out;
+                opacity: 0;
+                .nav-item{
+                    padding: 0 1rem;
+                    .nav-link{
+                        text-align: right;
+                    }
+                }
+
+                &.showMenuUp{
+                    display: block;
+                    transition: .5s;
+                    animation: .5s ease-in-out;
+                    right:  0%;
+                    opacity: 1;
+
+                }
+            }
+            .nav-item{
+                .nav-link{
+                    color: white;
+                    &.active{
+                        color: $neonGreen;
+                        position: relative;
+                        &::after{
+                            content: "";
+                            width: 40%;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            height: 2px;
+                            background: $neonGreen;
+                            color: #808080;
+                            position: absolute;
+                            bottom: 5px;
+                            @media screen and (max-width:$tabletX) {
+                                width: 10%;
+                                left: 90%;
+                                transform: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .navbar-toggler{
+            border-color: none;
+            display: none;
+            .navbar-toggler-icon{
+                position: relative;
+                &::after{
+                    position: absolute;
+                    content:"\f0c9";
+                    font-family: "FontAwesome";
+                    color: white;
+                    font-size: 32px;
+                    left: 50%;
+                    top: 50%;
+                    transform:translate(-50%,-50%);
+                }
+                &.showUp{
+                    &::after{
+                        content:"\f00d";
+                        font-family: "FontAwesome";
+                    }
+                }
+            }
+            &:focus{
+                outline: none;
+                box-shadow: none;
+            }
+            @media screen and (max-width:$tabletX) {
+                display: block;
+            }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+
+#portal{
+    .modal{
+        display: block;
+        background-color: #00000060;
+        backdrop-filter: blur(7px);
+        .modal-dialog{
+            .modal-content{
+                border-radius: 10px;
+                .modal-header{
+                    
+                    background-color: $green;
+                    
+                }
+                .modal-body{
+                    position: relative;
+                    padding-top: 7rem;
+                    &::before{
+                        content:"\f058";
+                        position: absolute;
+                        font-family: "FontAwesome";
+                        background-image: linear-gradient(90deg, $green 0%, $lightGreen  51%, $mediumBlue  100%);
+                        background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        font-size: 72px;
+                        left: 50%;
+                        top: 30%;
+                        transform:translate(-50%,-50%);
+                    }
+                    p{
+                        font-size: 1rem;
+                        font-weight: 500;
+                        text-align: center;
+                    }
+                }
+                .modal-footer{
+                    button{
+                        @include btn-primary;
+                        margin: 1rem auto;
+                        padding: 5px 20px;
+                        width: 40%;
+                        font-size: .9rem;
+                    }
+                }
+            }
+        }
+    }
+}

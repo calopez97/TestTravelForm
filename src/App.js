@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import logo from './logo.svg';
 import './App.css';
 
@@ -21,5 +22,17 @@ function App() {
     </div>
   );
 }
+=======
+import AppRouter from "./routers/AppRouter";
+
+const App = () => {
+   
+  return(
+     <>
+        <AppRouter/>
+     </>
+  );
+};
+>>>>>>> 479f8fa15a1b99d9c93d5b58ec50d5b04b620289
 
 export default App;

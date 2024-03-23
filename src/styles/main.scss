@@ -1,0 +1,8 @@
+/*Opto por utilizar sass para organización de estilos por componentes*/
+/*Se importa cada una de las hojas de estilos, finalmente este será el archivo centralizado
+que será llamado en el index.html*/
+@import "./variables";
+@import "./base";
+@import "./header";
+@import "./form";
+@import "./modals";

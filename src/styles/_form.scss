@@ -1,0 +1,97 @@
+.content-info{
+  margin: auto;
+  h1{
+    position: relative;
+    font-size: 2.4rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    @media screen and (max-width: $tablet) {
+      font-size: 2rem;
+    }
+    &::after{
+      content: "";
+      width: 40%;
+      left: 50%;
+      transform: translateX(-50%);      
+      height: 2px;
+      background: $ligthRed;
+      background: linear-gradient(90deg, $ligthRed 0%, $lightBlue 100%);
+      color: grey;
+      position: absolute;
+      bottom: -12px;
+    }
+  }
+  p{
+    font-size: 1rem;
+    font-weight: 400;
+    @media screen and (max-width: $tablet) {
+      font-size: .9rem;
+    }
+  }
+}
+
+.form-travel{
+    @media screen and (max-width: $tablet) {
+      padding: 3% 0;
+    }
+    
+    .form-container {
+      padding: 20px 10% 20px 10%;
+      background-color: $white;
+      border-radius: 15px;
+      box-shadow: 0px 2px 5px 0 #d7d7d7;
+      .section-title {
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+      .form-group {
+        &.error-form {
+          .form-label {
+            color: $orange;
+          }
+          .form-control {
+            border-color: $orange;
+          }
+          .alert-error {
+            color: $orange;
+            font-weight: 500;
+            display: block;
+          }
+        }
+        margin: 0 20px 15px 0;
+        @media screen and (max-width: $tablet) {
+          margin: 0 0 15px 0;
+        }
+        .alert-error {
+          display: none;
+        }
+      }
+      .form-label {
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 2px;
+        color: $black;
+        font-weight: 500;
+        @media screen and (max-width: $tablet) {
+          font-size: 13px;
+        }
+      }
+      .form-control {
+        border-radius: 0;
+        color: grey;
+        &::placeholder {
+          font-size: 13px;
+        }
+        &:focus {
+          box-shadow: none;
+        }
+      }
+      
+      .btn-primary{
+        @include btn-primary;
+      }
+      
+    }
+}
+  
+  
